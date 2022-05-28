@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <script src="main.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="App.vue">
+    <title>Jazro Challenge</title>
+
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+        body{
+          font-family: 'Nunito Sans', sans-serif;
+          background-color: var(--bgColor);
+          color: var(--textColor);
+          transition: 0.2s;
+        }
+
+        container{
+          width: 100%;
+          padding: 100%;
+          display: flex;
+          justify-content: space-betweens;
+        }
+
+        .container:nth-child(1){
+         box-shadow: 0 0 5px rgba(0, 0, 0, 3);
+        }
+        .form-control{
+          width: 420px;
+          box-shadow:0px,1px,5px rgba(0, 0, 0, 0.3);
+          position: relative;
+          border-radius: 7px;
+          border:none;
+          overflow: hidden;
+        }
+
+        .form-control input{
+          width: 45%;
+          padding:17px 14px;
+          outline:  0;
+          border:20px;
+          font-size: 16px;
+          letter-spacing: 0.5px;
+        }
+        
+        table, th, td {
+          text-align: center;
+          padding: 15px;
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+
+        img{
+          width: 200px;
+        }
+
+    </style>
+  </head>
+  
+  <body>
+    <header class ="header">
+        <div style="background-color:#e5e5e5;padding:20px;text-align:center;">
+            <h1>World Countries</h1>
+        </div>
+
+        <div class="container">
+            <div class="form-control">
+              <input type="search" placeholder="Search for Country" class="search">
+              <i class="fa fa-search"></i>
+            </div>
+        </div>
+  </header>
+    <div class="container">
+      <table style="width: 90%; margin-right: auto; margin-left: auto;">
+        <thead>
+          <tr>
+           <th>Flag </th>
+           <th class = "CountryName">Name</th>
+           <th>Region</th>
+            <th>Capital</th>
+          </tr>
+        </thead>
+
+        <tbody id ="cdata"></tbody>
+      </table>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+  
